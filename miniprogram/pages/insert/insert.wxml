@@ -1,0 +1,31 @@
+<view class='comtainer'>
+  <view class="classname">
+    <form bindsubmit="edituser">       
+      <view class="xing">科目：
+        <input placeholder-class='placeholder'  placeholder='科目全称'  class="in" />
+      </view>
+      <view class="xing">面向学院：
+        <input placeholder-class='placeholder'  placeholder='学院全称'  class="in"  />
+      </view>
+      <view class="xing">面向年级：
+        <input placeholder-class='placeholder'  placeholder='201X'  class="in"  />
+      </view>
+      <view class="xing">授课班号：
+        <input placeholder-class='placeholder'  placeholder='授课班号'  class="in"  />
+      </view>
+      <view class="xing">考试月日：
+        <input placeholder-class='placeholder'  placeholder='X月X日'  class="in"  />
+      </view>
+      <view class="xing">具体时间：
+        <input placeholder-class='placeholder'  placeholder='X时X分-X时X分'  class="in"  />
+      </view>
+      <view class="xing">考试地点：
+        <input placeholder-class='placeholder'  placeholder='考试地点'  class="in"  />
+      </view>
+      <view class="xing">监考老师：
+        <input placeholder-class='placeholder'  placeholder='监考老师'  class="in"  />
+      </view>
+      <button type="" form-type="submit" hover-class='button-hover' class='su'>发布</button>
+    </form>   
+  </view>
+</view>

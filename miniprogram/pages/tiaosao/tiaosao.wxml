@@ -1,0 +1,31 @@
+<!--pages/tiaosao/tiaosao.wxml-->
+<view class='container'>
+  <view class="container-gray">
+		<view class="tab-content">
+    <view class='question-list'>
+			<view class="question-item {{showquestionindex==index?'active':''}}" wx:for="{{tiaosao}}" wx:key="{{item.id}}" bindtap="foldQuestion" data-qindex="{{index}}">
+          <block wx:if="{{item.canshow==0}}">
+					  <view class="question-item-q"><text space="ensp">{{item.title}}\n{{item.date}}</text></view>
+					  <view class="question-item-a"><text space="ensp">{{item.user}}:\n  {{item.content}}</text>   
+              <image src="{{item.picUrl}}"></image>
+            </view>
+           	<view class="btns">
+				        <button class="btn-sumbit" hover-class="btn-active" bindtap='send'>通过</button>
+				        <button class="btn-reset" hover-class="btn-active" form-type="reset">拒绝</button>
+			      </view>
+          </block>
+          <block wx:else>
+            <view class="question-item-q"><text space="ensp">{{item.title}}\n{{item.date}}</text></view>
+					  <view class="question-item-a"><text space="ensp">{{item.user}}:\n  {{item.content}}</text>   
+              <image src="{{item.picUrl}}"></image>
+            </view>
+           	<view class="btns">
+				        <text class="pass">已审核通过！</text>
+			      </view>
+          </block>
+      </view>
+      </view>
+		</view>
+	</view> <!--container-gray-->
+</view> <!--container-->
+

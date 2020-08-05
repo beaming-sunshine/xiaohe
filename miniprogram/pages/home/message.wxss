@@ -1,0 +1,11 @@
+/* pages/home/message.wxss */
+.tongzhi{
+  margin-left: 350rpx;
+  margin-top:20rpx;
+  color:red;
+  font-size: 25rpx;
+
+}
+.head{
+  font-family: SimHei;
+}

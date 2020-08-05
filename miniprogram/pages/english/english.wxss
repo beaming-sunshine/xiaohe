@@ -1,0 +1,20 @@
+/* pages/english/english.wxss */
+.box{
+  height: 40%;
+  width: 65%;
+  padding-top:80rpx;
+  padding-bottom: 30rpx;
+}
+.subject{
+  height: 200rpx;
+  background: linear-gradient(to bottom right,  #cecece, #000000);
+  border-radius: 30rpx;
+  color: white;
+  text-align: center;
+  padding-top: 140rpx;
+}
+.icon{
+  width: 30px;
+  height: 30px;
+  padding-left: 30rpx;
+}

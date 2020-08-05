@@ -1,0 +1,71 @@
+page{
+    position: relative;
+    height: 100%;
+    background-color: white
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white
+}
+.canvas_area{
+    width: 100%;
+    height: 88%;
+    background-color: #ffffff;
+    z-index: 1;
+}
+.myCanvas{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.canvas_tools{
+    position: absolute;
+    left: 0;
+    bottom: 20rpx;
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items:center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #FFF;
+    z-index: 2;
+}
+
+.box{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    background-color: rebeccapurple;
+}
+
+.box1{
+    background-color: #cc0033;
+    
+}
+
+.box2{
+    background-color: #0099cc;
+}
+
+.box3{
+    background-color: #99cccc;
+}
+
+.box4{
+    background-color: #ff9900;  
+}
+
+.box5{
+    background-color: #cccccc;
+    
+    
+}
+.icon{
+  height: 100rpx;
+  width: 100rpx
+}

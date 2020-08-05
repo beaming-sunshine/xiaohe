@@ -1,0 +1,11 @@
+/* pages/home/hhuc.wxss */
+.text-container{
+  padding: 18rpx 28rpx;
+  border-color: blue;
+  border:3rpx;
+  font-size: 38rpx
+}
+.image{
+  width: 100%;
+  
+}

@@ -1,0 +1,52 @@
+<scroll-view scroll-y="true" class="container" >
+
+  <view class="search flex-wrp">
+      <view class="search-left flex-item">
+          <image src="./../../images/image/search.png"></image>
+          <input placeholder-class="search-placeholder"/>
+      </view>
+      <view class="search-right flex-item" bindtap="upper">
+          <image src="./../../images/image/lighting.png"></image>
+      </view>
+  </view>
+<block wx:for="{{shoppings}}">
+<block wx:if="{{item.canshow==1}}">
+  <view class="feed-item"role=""aria-label="">
+    <view class="feed-source"role=""aria-label="">
+      <a>
+        <view class="avatar"role=""aria-label="">
+          <image src="{{item.picUrl}}"></image>
+        </view>
+        <text>{{item.user}}</text>
+      </a>
+    </view>
+    <view class="feed-content"role=""aria-label="">
+      <view bindtap="bindQueTap"class="question"role=""aria-label="">
+        <a class="question-link">
+          <text>{{item.title}}</text>
+        </a>
+      </view>
+      <view class="answer-body"role=""aria-label="">
+        <view bindtap="bindItemTap"role=""aria-label="">
+          <text class="answer-txt">{{item.content}}</text>
+        </view>
+        <view style=" margin-top:10px;">
+          <image style=" width:120px;height:150px;" src="./../../images/image/tiaozao.jpg"></image>
+        </view> 
+        <view bindtap="bindItemTap"class="answer-actions"role=""aria-label="">
+          <view>
+            <a>{{item.date}}</a>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    </block>
+  </block>
+</scroll-view>
+  <view class="btn-group">
+    <button class="btn-release" bindtap="gotsRelease">
+      <icon class="icon icon-jia"></icon>
+    </button>
+  </view>
+

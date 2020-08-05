@@ -1,0 +1,37 @@
+<!--pages/social/play.wxml-->
+<view class="addr">
+  <text class="map" space='ensp'>       所在城市: {{province}} {{city}} {{district}}</text>
+  <button class="btn" bindtap="nearby_search">点我出去玩吧</button>
+</view>
+<!--地图容器-->
+<view>
+<map id="myMap"
+   markers="{{markers}}"
+   style="margin-top: 115rpx;width:100%;height:800rpx;"
+   longitude="{{longitude}}"
+   latitude="{{latitude}}" scale='18'>
+</map>
+</view>
+<view wx:for="{{markers}}" wx:key="index">
+<view class="news_content">
+    <view class="news_content_right news_content-left">
+        <image src="./../../images/image/miancang.png"></image>
+    </view>
+    <view class="news_content_left news_content-right">
+      <view class="news_content_left_top">
+          <view class="text_top" id="{{index}}">{{item.title}}</view>
+      </view>
+      <view class="news_content_left_but">
+        <text class="map addre">具体地址：{{item.addr}}\n</text>
+        <view class='line'></view>
+        <text class="map category">分类：{{item.category}}\n</text>
+        <view class='line'></view>
+        <text class="map distance">距离你有{{item.distance}}米哦!</text>
+      </view>
+      </view>
+    </view>
+    
+</view>
+
+
+

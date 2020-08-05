@@ -1,0 +1,61 @@
+.group-body{
+	background: #fff;
+	border-top: 2rpx solid #ddd;
+	border-bottom: 2rpx solid #ddd;
+  padding: 18rpx;
+  font-size: 33rpx;
+}
+.group-head{
+  font-size: 35rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 10rpx;
+}
+.button{
+  padding-top: 60rpx;
+	font-size: 36rpx;
+	line-height: 72rpx;
+  text-align: center;
+}
+.btn-block{
+  width: 80%;
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 35rpx
+}
+.image{
+	width: 44rpx;
+	height: 44rpx;
+	display: block;
+	margin: 10rpx auto 0;
+}
+.img-upload{
+	padding: 20rpx;
+	font-size: 0;
+	overflow: hidden;
+}
+.img-upload .img-item,
+.img-upload .img-add{
+	width: 100rpx;
+	height: 100rpx;
+	float: left;
+	margin: 10rpx;
+	border: 1rpx solid transparent;
+}
+.img-upload .img-add{
+	border: 1rpx dashed #ddd;
+	background: url(../../images/add.png) no-repeat 50% 50% / 70% auto;
+}
+.img-upload .img-item image{
+	width: 100rpx;
+	height: 100rpx;
+}
+.img-upload .img-item{
+	position: relative;
+}
+.img-upload .img-item icon{
+	position: absolute;
+	right: -12rpx;
+	top: -12rpx;
+}

@@ -1,0 +1,103 @@
+/**index.wxss**/
+page {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.circle-out {
+  margin: 70px auto;
+  position: relative;
+  width: 700rpx;
+  height: 700rpx;
+  border-radius: 50%;
+  background-color: #080808;
+}
+
+.userinfo-avatar {
+  overflow:hidden;
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/**子控件的透明度等于父控件透明度*子控件透明度,父控件的opacity设置后,
+所以子控件opacity设置为1依然无效,必须分离开
+*/
+
+.circle-in {
+  position: absolute;
+  width: 660rpx;
+  height: 660rpx;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #080808;
+}
+
+/**菜单*/
+
+.menu-list {
+  position: relative;
+
+}
+
+.menu-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height:100%;
+  width: 100%;
+  font-weight: 500;
+  background-color:opacity;
+}
+
+.menu-circle-item {
+  -webkit-transform-origin: 50% 300rpx;
+  transform-origin: 50% 300rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  position: relative;
+  height:100rpx;
+  width: 100rpx;
+  background-color: #FFFFFF;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.image-style {
+  height: 50rpx;
+  width: 50rpx;
+  color: #f00;
+  margin: 25rpx auto;
+}
+
+.text-style {
+  margin: 10rpx auto;
+  font-size: 30rpx;
+  color: #FFFFFF
+}
+
+/***/
+
+.menu-circle-text-item {
+  -webkit-transform-origin: 50% 200rpx;
+  transform-origin: 50% 200rpx;
+  margin: 0 auto;
+  position: relative;
+  height: 25rpx;
+  width: auto;
+  text-align: center;
+}
+
+          

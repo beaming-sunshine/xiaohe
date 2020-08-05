@@ -1,0 +1,16 @@
+<view class='container'>
+  <view class="container-gray">
+		<view class="tab">
+			<view class="tab-content">
+				<view class="tab-panel">
+					<view class="question-list">
+						<view class="question-item {{showquestionindex==index?'active':''}}" wx:for="{{exams}}" wx:key="{{item.id}}" bindtap="foldQuestion" data-qindex="{{index}}">
+							<view class="question-item-q"><text space="ensp">{{item.q}}</text></view>
+							<view class="question-item-a"><text space="ensp">{{item.a}}</text></view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view> <!--container-gray-->
+</view> <!--container-->

@@ -1,0 +1,15 @@
+<!--pages/home/message.wxml-->
+ <view class='br'></view>
+  <view class='item'>
+    <text class='head'>表白墙💗</text>
+    <text class='tongzhi'> 有关于你的2条通知</text>
+  </view> 
+  <view class='br'></view>
+  <view class='line'></view>
+   <view class='br'></view>
+  <view class='item'>
+    <text class='head'>跳蚤市场</text>
+    <text class='tongzhi'> 有关于你的3条通知</text>
+  </view> 
+  <view class='br'></view>
+  <view class='line'></view>

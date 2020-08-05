@@ -1,0 +1,19 @@
+<view class="container" >
+    <!--画布区域-->
+    <view class="canvas_area">
+        <canvas canvas-id="myCanvas" class="myCanvas"
+            disable-scroll="false"
+            bindtouchstart="touchStart"
+            bindtouchmove="touchMove"
+            bindtouchend="touchEnd">
+        </canvas>
+    </view>
+    <!--画布工具区域-->
+    <view class="canvas_tools">
+        <view class="box box1" bindtap="colorSelect" data-param="#cc0033"><image class='icon' src='../../images/icon/pen.png'></image></view>
+        <view class="box box2" bindtap="colorSelect" data-param="#0099cc"><image class='icon' src='../../images/icon/pen.png'></image></view>
+        <view class="box box3" bindtap="clearCanvas"><image class='icon' src='../../images/icon/eraser.png'></image></view>
+        <view class="box box4" bindtap="clearAll"><image class='icon' src='../../images/icon/delete.png'></image></view>
+        <view class="box box5" bindtap='save'><image class='icon' src='../../images/icon/save.png'></image></view>  
+    </view>
+</view>

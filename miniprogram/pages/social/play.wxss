@@ -1,0 +1,11 @@
+.btn {
+  width: 90%;
+  height: 7%;
+  margin-top: 70rpx;
+  margin-left:20rpx;
+  background-color: #87CEFA;
+  color: #FFF;
+}
+.btn::after {
+  border: 0;
+}

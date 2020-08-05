@@ -1,0 +1,11 @@
+    <view class='item'>
+      <view class='order'>系统设置</view>
+    </view>
+    <view class='line'></view>
+    <view class='item'>
+      <view class='order'>主题设置</view>
+    </view>
+    <view class='line'></view>
+    <view class='item'>
+      <view class='order' bindtap='goManager'>管理员登陆</view>
+    </view>

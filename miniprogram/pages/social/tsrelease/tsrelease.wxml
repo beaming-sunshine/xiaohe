@@ -1,0 +1,33 @@
+<!--pages/social/tsrelease/tsrelease.wxml-->
+<view id="app">
+<block wx:if="{{!hasUserinfo}}">
+  <button class='getuserbtn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+  获取您的信息哦
+  </button>
+</block>
+<block wx:else>
+	<form catchsubmit="formSubmit" catchreset="formReset" >
+		<view class="post-container">
+			<input placeholder="标题" name="title" class="input-title" bindinput="titleEventFunc"
+			       placeholder-class="input-class" />
+			<textarea class="textarea" name="content" maxlength="150" focus="{{focus}}" placeholder="我也想卖点啥" bindblur="contentEventFunc"/>
+		<view class="img-upload">
+					<view class="img-add" bindtap="chooseImage"><icon class="icon icon-jia"></icon></view>
+					<view class="img-item" bindtap="editImage" wx:for="{{uploadimgs}}" wx:key="{{index}}">
+
+						<icon type="clear" size="20" color="red" style="display:{{editable?'block':'none'}}" bindtap="deleteImg" data-index="{{index}}"/>
+						<image src="{{item}}" mode="aspectFill"></image>
+					</view>
+</view>
+			<view class="btn-group">
+				<button class="btn-sumbit" hover-class="btn-active" bindtap='send'>
+					立即发布
+				</button>
+				<button class="btn-reset" hover-class="btn-active" form-type="reset">
+					重置
+				</button>
+			</view>
+		</view>
+	</form>
+</block>
+</view>

@@ -1,0 +1,6 @@
+<view class="container"> 
+  <image class='bird' src='https://www.beamingsunshine.cn/pictures/cute.jpg'></image>
+  <view class="div"> 
+    <camera device-position="front" flash="off" binderror="error" class="camera" bindstop='bindstop' binderror='binderror'></camera> 
+  </view> 
+</view>

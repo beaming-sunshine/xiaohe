@@ -1,0 +1,137 @@
+<view class='showMsg' bindtap='outbtn'>
+
+<scroll-view scroll-y="true" class="history" scroll-top="scrollTop" >
+  <view class='row'>
+  <block wx:if='{{res!=" "}}'>
+      <view><image class='user2' src="../../images/image/he.jpg"></image></view>
+      <view class='div2'>
+      <view class="msgbox2">
+       <view class='text2'><text>{{res}}</text></view>
+      </view>
+      </view>
+    </block>
+    <block wx:else></block>
+    </view>
+
+  <block wx:for="{{message}}">
+  
+  <view class='row'>    
+    <block wx:if='{{item.msg!=" "}}'>
+      <view><open-data class='user1' type="userAvatarUrl"></open-data></view>
+      <view class='div1'>
+        <view class='msgbox1'>
+          <view class='text1'><text selectable='true' space="ensp">{{item.msg}}</text></view>
+        </view>
+      </view>
+    </block>
+    <block wx:else></block>
+    <block wx:if='{{item.msgimg!=" "}}'>
+      <view class='user1'><open-data type="userAvatarUrl"></open-data></view>
+      <view class='div1'>
+        <image class='pic' data-src='{{item.msgimg}}' bindtap='previewImg' mode='widthFix' src="{{item.msgimg}}" data-set="{{item.msgimg}}"></image>
+       </view>
+    </block>
+    <block wx:else></block>
+    <block wx:if='{{item.msgvoi!=" "}}'>
+      <view><open-data class='user1' type="userAvatarUrl"></open-data></view>
+      <view class='div1' >
+        <view class='msgbox1' data-param="{{item.msgvoi}}" bindtap='playvoice'>
+          <view wx:if="{{playing}}">
+            <image class='ico' src='https://beamingsunshine.cn/pictures/voice.gif' />
+          </view>
+          <view wx:else>
+            <image class='ico' src="../../images/icon/voice.png" />
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else></block>
+    <block wx:if='{{item.msgvdo!=" "}}'>
+      <view class='user1'><open-data type="userAvatarUrl"></open-data></view>
+      <view class='div1'>
+        <video class='pic' src="{{item.msgvdo}}" controls></video>
+       </view>
+    </block>
+    <block wx:else></block>
+  </view>
+
+  <view class='row'>
+    <block wx:if='{{item.resp!=" "}}'>
+      <view><image class='user2' src="../../images/image/he.jpg"></image></view>
+      <view class='div2'>
+      <view class="msgbox2">
+       <view class='text2'>
+        <text selectable='true' space='ensp'>{{item.resp}}</text> 
+        <view wx:if="{{item.resp==option}}">
+          <block wx:for='{{item.options}}'>
+            <navigator bindtap='setMsg' data-param="{{item.ques}}" hover-class="navigator-hover">
+              <text space='ensp'>\n {{item.num}}.<text class='navigator'>{{item.ques}}</text></text>
+            </navigator>
+          </block>
+        </view>
+      </view>
+      </view>
+      </view>
+    </block>
+    <block wx:else></block>
+    <block wx:if='{{item.respimg!=" "}}'>
+      <view><image class='user2' src="../../images/image/he.jpg"></image></view>
+      <view class='div2'>
+       <image class='pic' data-src='{{item.respimg}}' bindtap='previewImg' mode='widthFix' src="{{item.respimg}}" data-set="{{item.respimg}}"></image>
+      </view>
+    </block>
+    <block wx:else></block>
+    <block wx:if='{{item.respvoi!=" "}}'>
+      <view><image class='user2' src="../../images/image/he.jpg"></image></view>
+      <view class='div2'>
+        <view class='msgbox2' data-param="{{item.respvoi}}" bindtap='playaudio'>
+          <view wx:if="{{playing}}">
+            <image class='ico' src='https://beamingsunshine.cn/pictures/voice1.gif' />
+          </view>
+          <view wx:else>
+            <image class='ico' src="../../images/icon/voice1.png" />
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else></block>
+    <block wx:if='{{item.respvdo!=" "}}'>
+      <view class='user2'><open-data type="userAvatarUrl"></open-data></view>
+      <view class='div2'>
+        <video class='pic' src="{{item.respvdo}}" controls></video>
+       </view>
+    </block>
+    <block wx:else></block>
+  </view>
+</block>
+</scroll-view>
+</view>
+
+<view id="flag">
+</view> 
+
+<view class='sendmsg'>
+  <view class='row resetbtn'>
+      <button class='resetbtn' type='default' size='mini' bindtap='clearMsg'>重置对话</button>
+  </view>
+  <form class="sendMessage">
+    <view wx:if='{{sound}}'>
+      <image class='imgbtn' src='../../images/icon/keyboard.png' bindtap='changeMethod'></image>  
+      <button class='inputbutton' type='default' bindtouchstart="touchdown" bindtouchend="touchup">按住 说话</button>  
+      <view class='add' bindtap='increase'><view class='icon_div'><image class='icon_add' src='../../images/icon/add.png'></image></view></view>
+    </view>
+
+    <view wx:else>
+      <image class='imgbtn' src='../../images/icon/sound.png' bindtap='changeMethod'></image>    
+      <input class='inputbox' type='text' name='msg' bindinput='bindChange'/>
+      <view wx:if="{{send}}">
+      <button class='button' type='primary' formType="reset" size="small" button-hover="blue" bindtap='send'>发送</button>
+      </view>
+      <view wx:else class='add' bindtap='increase'><view class='icon_div'><image class='icon_add' src='../../images/icon/add.png'></image></view> </view>
+    </view>
+  </form>
+   <view class='increased {{aniStyle?"slideup":"slidedown"}}' wx:if="{{increase}}">
+       <view class="image" bindtap='chooseImage'>相册 </view>  
+       <view class="image" bindtap='chooseVideo'>视频 </view>  
+    </view>
+</view>

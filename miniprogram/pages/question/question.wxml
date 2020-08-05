@@ -1,0 +1,20 @@
+<!--pages/question/question.wxml-->
+<view class='container'>
+  <view class="container-gray">
+			<view class="tab-content">
+				<view class="question-list">
+          <block wx:for="{{question}}" wx:key="{{item.id}}" >
+						<view class="question-item {{showquestionindex==index?'active':''}}" bindtap="foldQuestion" data-qindex="{{index}}">
+							<view class="question-item-q"><text space="ensp">{{item.user}}\n{{item.date}}提交</text></view>
+							<view class="question-item-a"><text space="ensp">{{item.question}}\n联系方式(tel)：{{item.phone}}</text></view>
+              <!--  <image src="{{item.picUrl}}"></image> -->
+              <view>
+				        <button class="btn-sumbit" hover-class="btn-active" bindtap='send'>回复</button>
+			        	<button class="btn-reset" hover-class="btn-active" form-type="reset">忽略</button>
+            </view>
+            </view>
+          </block>
+				</view>
+		</view>
+	</view> <!--container-gray-->
+</view> <!--container-->

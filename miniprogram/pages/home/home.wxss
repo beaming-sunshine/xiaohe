@@ -1,0 +1,79 @@
+.h2{
+  padding-left: 40px;
+}
+.head{
+  padding-left: 18rpx;
+  width: 70%;
+  font-size: 32rpx;
+}
+.icons{
+  height: 70rpx;
+  width: 70rpx;
+}
+.time{
+  padding-right: 18rpx;
+  width: 30%;
+  font-size: 32rpx;
+}
+.index-menu{
+	width: 100%;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	background: #fff;
+}
+.index-menu-item{
+	-webkit-flex: 0 0 25%;
+	-webkit-box-flex: 0;
+	flex: 0 0 25%;
+	max-width: 25%;
+	text-align: center;
+	margin-top: 10rpx;
+/* 	border-top: 1rpx solid #ddd;
+	border-bottom: 1rpx solid #ddd;
+	border-right: 1rpx solid #ddd; */
+	padding: 20rpx 20rpx;
+	box-sizing: border-box;
+	margin-bottom: -1rpx;
+}
+.index-menu-item image{
+	width: 110rpx;
+	height: 110rpx;
+}
+.index-menu-item text{
+	display: block;
+	font-size: 30rpx;
+	line-height: 1.4;
+	white-space: nowrap;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 0 30rpx 140rpx;
+}
+.userinfo-avatar {
+  overflow:hidden;
+  display: block;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+  padding: 30rpx 0 30rpx 30rpx;
+}
+.usermotto {
+  margin-top: 50px;
+}
+.user-motto{
+   margin-left: 30px;
+}
+.getUserInfo{
+  width: 278rpx;
+  height: 88rpx;
+  margin:2rpx;
+}

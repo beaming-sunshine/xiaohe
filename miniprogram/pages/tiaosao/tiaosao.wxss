@@ -1,0 +1,97 @@
+/* pages/tiaosao/tiaosao.wxss */
+.tab-content{
+	flex: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.question-list{
+	padding: 20rpx;
+}
+.question-item{
+	background: #fff;
+	margin-bottom: 110rpx;
+	border-bottom: 1rpx solid #ddd;
+}
+.question-item-q{
+	padding: 20rpx;
+	background:#8a8a8a;
+	padding-left: 80rpx;
+	padding-right: 70rpx;
+	position: relative;
+	line-height: 1.2;
+	color: #fff;
+  font-size: 38rpx;
+  font-family: "Simsun";
+  font-weight: 2rpx;
+}
+.question-item-q:before,
+.question-item-q:after{
+	content: '';
+	display: block;
+	width: 40rpx;
+	height: 50rpx;
+	position: absolute;
+	right: 20rpx;
+	top: 14rpx;
+}
+.question-item-a{
+	padding: 0 20rpx;
+	padding-left: 80rpx;
+	position: relative;
+	line-height: 1.4;
+	color: #666;
+  font-size: 30rpx;
+}
+.question-item-a.active{
+	background:  #000;
+}
+.question-item .question-item-a{
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	margin: 20rpx 0;
+}
+.question-item.active .question-item-q{
+	background:  #000;
+}
+.question-item.active .question-item-a{
+	-webkit-line-clamp: inherit;
+}
+.pass{
+  float: right;
+  width: 176rpx;
+  margin-right: 50rpx; 
+  margin-top: 20rpx;
+  background-color: #FAFAFA;
+  font-size: 26rpx;
+  color: #b2b2b2;
+}
+.button-hover {
+      background-color: #ccc;
+      color: white; }
+       .btn-sumbit,.btn-reset {
+      float: right;
+      width: 176rpx;
+      margin-top:7rpx;
+      margin-right: 50rpx; 
+      background-color: #FAFAFA;
+      -webkit-border-radius: 10rpx;
+      -moz-border-radius: 10rpx;
+      border-radius: 10rpx;
+      height: 86rpx;
+      line-height: 79rpx;
+      font-size: 26rpx;
+      text-align: center;
+      color: #b2b2b2;
+      -webkit-transition: all .15s;
+      -moz-transition: all .15s;
+      -ms-transition: all .15s;
+      -o-transition: all .15s;
+      transition: all .15s; }
+     .btn-reset {
+      margin-right: 5rpx; }
+     .btn-active {
+      color: white;
+      background-color: #000; }

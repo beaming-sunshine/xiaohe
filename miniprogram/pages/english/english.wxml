@@ -1,0 +1,10 @@
+<view class='container'>
+  <view class='box'>
+    <view class='subject' bindtap='english'><image class='icon' src='../../images/icon/english.png'></image>四六级英语等级考试</view>
+  </view>
+
+  <view class='box'>
+    <view class='subject' bindtap='computer'><image class='icon' src='../../images/icon/computer.png'></image> 计算机等级考试</view>
+  </view>
+
+</view>
